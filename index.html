@@ -60,22 +60,23 @@
         <div class="row mx-lg-4 mx-2">
             <div class="col-6 col-lg-3">
                 <div class="bg-dark text-white rounded m-lg-2">
-                    <p class="p-2">35 <span class="box">Days</span></p>
+
+                    <p class="p-2"><span class="box day">0</span></p>
                 </div>
             </div>
             <div class="col-6 col-lg-3">
                 <div class="bg-dark text-white rounded m-lg-2">
-                    <p class="p-2">17 <span class="box">Hours</span></p>
+                    <p class="p-2"><span class="box hour">0</span></p>
                 </div>
             </div>
             <div class="col-6 col-lg-3">
                 <div class="bg-dark text-white rounded m-lg-2">
-                    <p class="p-2">17 <span class="box">Minutes</span></p>
+                    <p class="p-2"><span class="box minute">0</span></p>
                 </div>
             </div>
             <div class="col-6 col-lg-3">
                 <div class="bg-dark text-white rounded m-lg-2">
-                    <p class="p-2">17 <span class="box">Seconds</span></p>
+                    <p class="p-2"><span class="box second">0</span></p>
                 </div>
             </div>
         </div>
@@ -87,5 +88,25 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.min.js"></script>
+    <script>
+        const countDown = () => {
+            const countDay = new Date('July 5, 2024 00:00:00');
+            const now = new Date();
+            const counter = countDay - now;
+            const second = 1000;
+            const minute = second * 60;
+            const hour = minute * 60;
+            const day = hour * 24;
+            const textDay = Math.floor(counter / day);
+            const textHour = Math.floor((counter % day) / hour);
+            const textMinute = Math.floor((counter % hour) / minute);
+            const textSecond = Math.floor((counter % minute) / second)
+            document.querySelector(".day").innerText = textDay + ' Days';
+            document.querySelector(".hour").innerText = textHour + ' Hours';
+            document.querySelector(".minute").innerText = textMinute + ' Minutes';
+            document.querySelector(".second").innerText = textSecond + ' Seconds';
+        }
+        setInterval(countDown, 1000);
+    </script>
 </body>
 </html>
