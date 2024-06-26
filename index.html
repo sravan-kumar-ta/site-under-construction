@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SD Builder.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('assets/Images/bg.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: "Playwrite ES Deco", cursive;
+        }
+        .container {
+            background-color: rgba(255,255,255,0.8);
+            max-width: 50%;
+        }
+        @media (max-width: 520px) {
+            body {
+                background-image: url('assets/Images/bg-sm.webp');
+            }
+            .container {
+                max-width: 70%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center p-4 rounded shadow-lg">
+        <h1 class="my-4">We&rsquo;ll be back soon!</h1>
+        <div class="text-muted px-5">
+            <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment.</p>
+            <p>&mdash; Sravan</p>
+        </div>
+        <div class="row mx-lg-4 mx-sm-2">
+            <div class="col-sm-6 col-lg-3">
+                <div class="bg-dark text-white p-2 rounded m-2">
+                    <span id="days">35</span>
+                    <br>Days
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="bg-dark text-white p-2 rounded m-2">
+                    <span id="hours">17</span>
+                    <br>Hours
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="bg-dark text-white p-2 rounded m-2">
+                    <span id="minutes">58</span>
+                    <br>Minutes
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="bg-dark text-white p-2 rounded m-2">
+                    <span id="seconds">26</span>
+                    <br>Seconds
+                </div>
+            </div>
+        </div>
+        <div class="mt-4">
+            <img src="assets/Images/working.svg" alt="Working" height="100">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.min.js"></script>
+</body>
+</html>
